@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Dr. Rebaz Dental Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">Dr. Rebaz</h1>
+                <span class="tagline">Dental Clinic</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="booking.html" class="nav-link active">Book Appointment</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-page">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h1 class="booking-title">Appointment Details</h1>
+                </div>
+                
+                <form class="appointment-form" id="appointmentForm">
+                    <div class="form-row">
+                        <!-- Left Column - Form Fields -->
+                        <div class="form-column">
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your name" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email (Optional)</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Your phone number">
+                            </div>
+
+                            <!-- Service -->
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service *</label>
+                                <select id="service" name="service" class="form-select" required>
+                                    <option value="">Select a service</option>
+                                    <option value="general-checkup">General Checkup</option>
+                                    <option value="teeth-cleaning">Teeth Cleaning</option>
+                                    <option value="dental-filling">Dental Filling</option>
+                                    <option value="root-canal">Root Canal Treatment</option>
+                                    <option value="teeth-whitening">Teeth Whitening</option>
+                                    <option value="dental-implant">Dental Implant</option>
+                                    <option value="orthodontics">Orthodontics</option>
+                                    <option value="oral-surgery">Oral Surgery</option>
+                                    <option value="emergency">Emergency Treatment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Right Column - Calendar -->
+                        <div class="calendar-column">
+                            <div class="form-group">
+                                <label class="form-label">Select Date *</label>
+                                <div class="calendar-container">
+                                    <div class="calendar-header">
+                                        <button type="button" class="calendar-nav" id="prevMonth">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <span class="calendar-month" id="currentMonth">November 2025</span>
+                                        <button type="button" class="calendar-nav" id="nextMonth">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="calendar-grid">
+                                        <div class="calendar-weekdays">
+                                            <div class="weekday">Su</div>
+                                            <div class="weekday">Mo</div>
+                                            <div class="weekday">Tu</div>
+                                            <div class="weekday">We</div>
+                                            <div class="weekday">Th</div>
+                                            <div class="weekday">Fr</div>
+                                            <div class="weekday">Sa</div>
+                                        </div>
+                                        <div class="calendar-days" id="calendarDays">
+                                            <!-- Calendar days will be generated by JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Selection -->
+                    <div class="form-group time-selection">
+                        <label class="form-label">Select Time *</label>
+                        <div class="time-slots" id="timeSlots">
+                            <button type="button" class="time-slot" data-time="09:00 AM">09:00 AM</button>
+                            <button type="button" class="time-slot" data-time="09:30 AM">09:30 AM</button>
+                            <button type="button" class="time-slot" data-time="10:00 AM">10:00 AM</button>
+                            <button type="button" class="time-slot" data-time="10:30 AM">10:30 AM</button>
+                            <button type="button" class="time-slot" data-time="11:00 AM">11:00 AM</button>
+                            <button type="button" class="time-slot" data-time="11:30 AM">11:30 AM</button>
+                            <button type="button" class="time-slot" data-time="02:00 PM">02:00 PM</button>
+                            <button type="button" class="time-slot" data-time="02:30 PM">02:30 PM</button>
+                            <button type="button" class="time-slot" data-time="03:00 PM">03:00 PM</button>
+                            <button type="button" class="time-slot" data-time="03:30 PM">03:30 PM</button>
+                            <button type="button" class="time-slot" data-time="04:00 PM">04:00 PM</button>
+                            <button type="button" class="time-slot" data-time="04:30 PM">04:30 PM</button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="confirm-btn">Confirm Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Dr. Rebaz Dental Clinic</h3>
+                    <p>Professional dental care you can trust</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="booking.html">Book Appointment</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. Rebaz Dental Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="booking-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+/* Booking Page Specific Styles */
+.booking-page {
+    padding: 120px 0 80px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.booking-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.booking-header {
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.booking-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.appointment-form {
+    padding: 2.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.calendar-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #2c5aa0;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+/* Calendar Styles */
+.calendar-container {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.calendar-nav {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #64748b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-nav:hover {
+    background: #e2e8f0;
+    color: #1e3a8a;
+}
+
+.calendar-month {
+    font-weight: 600;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+}
+
+.calendar-grid {
+    padding: 1rem;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.calendar-day:hover {
+    background: #f1f5f9;
+    color: #1e3a8a;
+}
+
+.calendar-day.other-month {
+    color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.calendar-day.selected {
+    background: #2c5aa0;
+    color: white;
+    border-color: #1e3a8a;
+}
+
+.calendar-day.today {
+    background: #dbeafe;
+    color: #1e40af;
+    border-color: #3b82f6;
+}
+
+.calendar-day.disabled {
+    color: #cbd5e1;
+    cursor: not-allowed;
+    background: #f8fafc;
+}
+
+/* Time Slots */
+.time-selection {
+    margin-top: 2rem;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #64748b;
+}
+
+.time-slot:hover {
+    border-color: #2c5aa0;
+    color: #1e3a8a;
+    background: #f8fafc;
+}
+
+.time-slot.selected {
+    background: #2c5aa0;
+    border-color: #1e3a8a;
+    color: white;
+}
+
+.time-slot.disabled {
+    background: #f1f5f9;
+    color: #cbd5e1;
+    cursor: not-allowed;
+    border-color: #f1f5f9;
+}
+
+/* Confirm Button */
+.confirm-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.confirm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.confirm-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    opacity: 1;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: white;
+    border-radius: 1px;
+}
+
+/* Success Message */
+.success-message {
+    background: #dcfce7;
+    border: 2px solid #16a34a;
+    color: #15803d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Error Message */
+.error-message {
+    background: #fef2f2;
+    border: 2px solid #ef4444;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-page {
+        padding: 100px 0 60px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .booking-container {
+        margin: 0 1rem;
+        border-radius: 15px;
+    }
+    
+    .appointment-form {
+        padding: 1.2rem;
+    }
+    
+    .booking-header {
+        padding: 1.2rem;
+    }
+    
+    .booking-title {
+        font-size: 1.4rem;
+    }
+    
+    .form-input,
+    .form-select {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .calendar-container {
+        border-radius: 10px;
+    }
+    
+    .calendar-header {
+        padding: 0.8rem;
+    }
+    
+    .calendar-month {
+        font-size: 1rem;
+    }
+    
+    .calendar-grid {
+        padding: 0.8rem;
+    }
+    
+    .calendar-day {
+        font-size: 0.85rem;
+        padding: 0.3rem;
+    }
+    
+    .weekday {
+        font-size: 0.75rem;
+        padding: 0.3rem 0;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .time-slot {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.85rem;
+    }
+    
+    .confirm-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-page {
+        padding: 90px 0 50px;
+    }
+    
+    .booking-container {
+        margin: 0 0.5rem;
+        border-radius: 12px;
+    }
+    
+    .appointment-form {
+        padding: 1rem;
+    }
+    
+    .booking-header {
+        padding: 1rem;
+    }
+    
+    .booking-title {
+        font-size: 1.2rem;
+    }
+    
+    .form-input,
+    .form-select {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-label {
+        font-size: 0.85rem;
+    }
+    
+    .calendar-header {
+        padding: 0.6rem;
+    }
+    
+    .calendar-month {
+        font-size: 0.9rem;
+    }
+    
+    .calendar-grid {
+        padding: 0.6rem;
+    }
+    
+    .calendar-days {
+        gap: 0.1rem;
+    }
+    
+    .calendar-day {
+        font-size: 0.75rem;
+        min-height: 32px;
+    }
+    
+    .weekday {
+        font-size: 0.7rem;
+        padding: 0.2rem 0;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
+    }
+    
+    .time-slot {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.75rem;
+    }
+    
+    .confirm-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .time-selection {
+        margin-top: 1.5rem;
+    }
+}
